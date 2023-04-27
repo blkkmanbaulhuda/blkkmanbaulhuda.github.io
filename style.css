@@ -302,6 +302,57 @@ footer{
   }
 }
 
+/* ------------------------- bg-hero ------------------------- */
+.bg-hero{
+  width: 100%;
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+  padding: 0;
+}
+.swiper{
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper{
+  width: 100%;
+}
+.swiper-slide{
+  background-position: center;
+  background-size: cover;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+.mySwiper .swiper-button-next{
+  right: 16px;
+}
+.mySwiper .swiper-button-prev{
+  left: 16px;
+}
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev{
+  color: var(--biru);
+}
+.mySwiper .swiper-pagination .swiper-pagination-bullet{
+  width: 32px;
+  height: 10px;
+  border-radius: 4px;
+  background: #fff;
+  margin: 0 8px !important;
+}
+.mySwiper .swiper-pagination .swiper-pagination-bullet-active{
+  background: var(--biru);
+}
+/*bg-hero responsive*/
+@media (max-width: 480px){
+  .mySwiper .swiper-button-next{
+    right: 8px;
+  }
+  .mySwiper .swiper-button-prev{
+    left: 8px;
+  }
+}
 
 
 
@@ -310,9 +361,6 @@ footer{
 
 
 
-
-
-/* ------------------------- xxx ------------------------- */
 /* ------------------------- xxx ------------------------- */
 /* ------------------------- xxx ------------------------- */
 /* ------------------------- xxx ------------------------- */
@@ -325,3 +373,95 @@ footer{
 /* ------------------------- xxx ------------------------- */
 
 /* ------------------------- footer ------------------------- */
+.footer{
+  background: var(--biru);
+}
+/* footer container */
+.footer .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5rem 1rem;
+  margin-bottom: 3rem;
+}
+.footer .container .box:first-child a{
+  display: block;
+  margin: auto;
+}
+.footer .container .box:first-child a img{
+  width: 100px;
+  height: 100px;
+}
+.footer .container .box:first-child p{
+  text-align: center;
+  color: gainsboro;
+}
+.footer .container .box h3{
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.footer .container .box a{
+  color: gainsboro;
+  display: block;
+  width: max-content;
+  margin-bottom: 8px;
+}
+.footer .container .box a:last-child{
+  margin-bottom: 0;
+}
+.footer .container .box a:hover{
+  color: #fff;
+}
+.footer .container .box a i{
+  margin-right: 8px;
+}
+/* footer google-maps */
+.footer .google-maps{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5rem 1rem;
+  margin-bottom: 3rem;
+}
+.footer .google-maps iframe{
+  width: 100%;
+  height: 400px;
+}
+.footer .google-maps .lokasi h3{
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.footer .google-maps .lokasi p{
+  color: gainsboro;
+  margin-bottom: 1rem;
+}
+.footer .google-maps .lokasi div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.footer .google-maps .lokasi div .btn{
+  width: 150px;
+  color: gainsboro;
+  border: 1px solid gainsboro;
+  text-align: center;
+  border-radius: 4px;
+  margin-top: 0;
+}
+.footer .google-maps .lokasi div .btn:hover{
+  background: #fff;
+  color: var(--biru);
+}
+.footer .google-maps .lokasi div .btn i{
+  margin-right: 8px;
+}
+/* footer copyright */
+.footer .copyright{
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255,255,255,25%);
+
+}
+.footer .copyright p{
+  color: gainsboro;
+  text-align: center;
+}
