@@ -70,3 +70,34 @@ window.addEventListener('resize', () => {
 		}
 	}
 });
+window.addEventListener('scroll', () => {
+	navbarMenu.classList.remove('active');
+	overlayMenu.classList.remove('active');
+});
+
+// --------------- bg-hero ---------------
+var swiper = new Swiper(".mySwiper", {
+	spaceBetween: 30,
+	effect: "fade",
+	navigation: {
+		nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    loop:true, 
+    grabCursor:true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 5000,
+    }
+});
+
+// --------------- footer copyright ---------------
+let date = new Date().getFullYear();
+document.querySelector('.tahun').innerHTML = date;
