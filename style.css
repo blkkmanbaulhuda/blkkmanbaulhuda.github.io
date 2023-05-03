@@ -52,14 +52,9 @@ button{
   cursor: pointer;
 }
 .heading{
-  font-size: 28px;
-  text-align: center;
   margin-bottom: 2rem;
-  color: tomato;
-  text-shadow: 2px 2px 2px #333;
-}
-.heading span{
-  color: navy;
+  text-align: center;
+  color: var(--biru);
 }
 .btn{
   margin-top: 1rem;
@@ -314,15 +309,16 @@ footer{
   height: 100%;
 }
 .swiper-wrapper{
-  width: 100%;
+  /*width: 100%;*/
 }
 .swiper-slide{
-  background-position: center;
-  background-size: cover;
+  /*background-position: center;
+  background-size: cover;*/
 }
-.swiper-slide img {
-  display: block;
-  width: 100%;
+.bg-hero .box {
+  min-height: 100vh;
+  background-size: cover !important;
+  background-position: center !important;
 }
 .mySwiper .swiper-button-next{
   right: 16px;
@@ -332,7 +328,7 @@ footer{
 }
 .mySwiper .swiper-button-next,
 .mySwiper .swiper-button-prev{
-  color: var(--biru);
+  color: #fff;
 }
 .mySwiper .swiper-pagination .swiper-pagination-bullet{
   width: 32px;
@@ -342,7 +338,7 @@ footer{
   margin: 0 8px !important;
 }
 .mySwiper .swiper-pagination .swiper-pagination-bullet-active{
-  background: var(--biru);
+  background: #fff;
 }
 /*bg-hero responsive*/
 @media (max-width: 480px){
@@ -354,14 +350,18 @@ footer{
   }
 }
 
+/* ------------------------- tentang ------------------------- */
+.tentang .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
+  place-items: center;
+}
 
 
 
 
 
-
-
-/* ------------------------- xxx ------------------------- */
 /* ------------------------- xxx ------------------------- */
 /* ------------------------- xxx ------------------------- */
 /* ------------------------- xxx ------------------------- */
