@@ -63,7 +63,6 @@ window.addEventListener('resize', () => {
 		if (navbarMenu.classList.contains('active')) {
 			toggleMenu();
 		}
-
 		// If menu-item-child is Expanded, then Collapse It
 		if (navbarMenu.querySelector('.menu-item-child.active')) {
 			collapseSubMenu();
@@ -77,25 +76,19 @@ window.addEventListener('scroll', () => {
 
 // --------------- bg-hero ---------------
 var swiper = new Swiper(".mySwiper", {
-	spaceBetween: 30,
-	effect: "fade",
-	navigation: {
-		nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+	loop: true,
+    grabCursor: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
-    loop:true, 
-    grabCursor:true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
     autoplay: {
       delay: 5000,
-    }
+    },
 });
 
 // --------------- footer copyright ---------------
