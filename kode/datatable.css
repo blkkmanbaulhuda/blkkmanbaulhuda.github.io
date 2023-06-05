@@ -2,26 +2,46 @@
 /*jtable__panel*/
 .jtable .jtable__panel{
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 8px 1rem;
 }
 .jtable .jtable__panel div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 8px;
 }
 .jtable .jtable__panel div:first-child {
-  align-items: center;
-  flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 .jtable .jtable__panel  div:first-child span {
   margin-left: 0.5rem;
 }
 .jtable .jtable__panel div:last-child {
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   width: 50%;
 }
 .jtable .jtable__panel div:last-child input{
@@ -82,6 +102,8 @@
   border-right: none;
 }
 .jtable table tr td:nth-child(4) .btn{
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   display: block;
   margin: 0 auto;
@@ -101,12 +123,18 @@
 }
 .jtable .jtable__panel:last-child #example_pagination{
   width: 100%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 8px;
 }
 .jtable__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .jtable__pagination button {
   text-align: center;
@@ -114,9 +142,15 @@
   border: solid 1px #d0d0d0;
   cursor: pointer;
   padding: 2px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 0;
 }
 .jtable__pagination button:first-child {
@@ -136,10 +170,15 @@
 /*responsive media query*/
 @media screen and (max-width: 768px) {
   .jtable .jtable__panel{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .jtable .jtable__panel div:last-child {
-    align-items: initial;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
     width: initial;
   }
 }
