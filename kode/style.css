@@ -8,7 +8,10 @@
   text-decoration: none;
   list-style: none;
   -webkit-tap-highlight-color: transparent !important;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   text-rendering: optimizeLegibility;
 }
 :root{
@@ -41,7 +44,13 @@ img{
   display: block;
   width: 100%;
   height: 100%;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -ms-user-select: none;
 }
 p, li, span, a, button{
   line-height: 24px;
@@ -65,11 +74,54 @@ button{
   background: none;
   padding: 8px 16px;
   font-size: 16px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .btn:hover{
   background: var(--biru);
   color: #fff;
+}
+.grid{
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
+}
+.flex-center{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+.flex-evenly{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+.mb-1{
+  margin-bottom: 1rem;
+}
+.mb-2{
+  margin-bottom: 2rem;
+}
+.mb-3{
+  margin-bottom: 3rem;
 }
 
 /*root responsive*/
@@ -107,9 +159,15 @@ footer{
   color: #fff;
 }
 .header .wrapper{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1rem;
   max-width: 100%;
 }
@@ -124,7 +182,9 @@ footer{
   height: 16px;
   opacity: 0;
   visibility: hidden;
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 .header .wrapper .burger-line{
@@ -136,7 +196,9 @@ footer{
   opacity: 1;
   border-radius: 4px;
   background: #fff;
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 .header .wrapper .burger-line:nth-child(1){
@@ -159,12 +221,15 @@ footer{
   opacity: 0;
   visibility: hidden;
   background: rgba(0,0,0,.5);
+  -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 .header .wrapper .navbar .mobile-logo{
   display: none;
 }
 .header .wrapper .navbar .menu{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 1.5rem;
 }
@@ -175,7 +240,8 @@ footer{
   display: block;
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 .header .wrapper .navbar .menu .menu-item a{
   color: #fff;
@@ -230,15 +296,23 @@ footer{
     height: 100%;
     padding: 16px;
     
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
     display: flex;
     gap: 1rem 0;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     overflow: auto;
 
     z-index: 999;
     opacity: 0;
     visibility: hidden;
     background: var(--biru);
+    -webkit-transition: all .3s ease;
     transition: all .3s ease;
   }
   .header .wrapper .navbar.active{
@@ -255,7 +329,10 @@ footer{
     margin: auto;
   }
   .header .wrapper .navbar .menu{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     padding: 32px 0 0 ;
     border-top: 1px solid rgba(255,255,255,25%);
@@ -274,7 +351,8 @@ footer{
     overflow: hidden;
     visibility: visible;
     background: transparent;
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   .header .wrapper .navbar .menu .menu-item .sub-menu .menu-item a{
     color: #fff;
@@ -308,17 +386,27 @@ footer{
   width: 100%;
   height: 100%;
 }
-.swiper-wrapper{
-  /*width: 100%;*/
-}
-.swiper-slide{
-  /*background-position: center;
-  background-size: cover;*/
-}
 .bg-hero .box {
   min-height: 100vh;
   background-size: cover !important;
   background-position: center !important;
+}
+.bg-hero .box .h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 2px #000;
+}
+.bg-hero .box .h1 h1{
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+.bg-hero .box .h1 p{
+  font-size: 20px;
 }
 .mySwiper .swiper-button-next{
   right: 16px;
@@ -352,20 +440,14 @@ footer{
 
 /* ------------------------- tentang ------------------------- */
 .tentang .container{
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1.5rem;
   place-items: center;
 }
 
-
-
-
-
-/* ------------------------- xxx ------------------------- */
-/* ------------------------- xxx ------------------------- */
-/* ------------------------- xxx ------------------------- */
-/* ------------------------- xxx ------------------------- */
 /* ------------------------- xxx ------------------------- */
 /* ------------------------- xxx ------------------------- */
 /* ------------------------- xxx ------------------------- */
@@ -378,8 +460,10 @@ footer{
 }
 /* footer container */
 .footer .container{
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1.5rem 1rem;
   margin-bottom: 3rem;
 }
@@ -402,6 +486,8 @@ footer{
 .footer .container .box a{
   color: gainsboro;
   display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin-bottom: 8px;
 }
@@ -416,8 +502,10 @@ footer{
 }
 /* footer google-maps */
 .footer .google-maps{
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1.5rem 1rem;
   margin-bottom: 3rem;
 }
@@ -434,11 +522,18 @@ footer{
   margin-bottom: 1rem;
 }
 .footer .google-maps .lokasi div{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 8px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .footer .google-maps .lokasi div .btn{
   width: 150px;
@@ -459,9 +554,119 @@ footer{
 .footer .copyright{
   padding-top: 3rem;
   border-top: 1px solid rgba(255,255,255,25%);
-
 }
 .footer .copyright p{
   color: gainsboro;
   text-align: center;
+}
+
+/* #################################################################################################### */
+/* ------------------------------ index ------------------------------ */
+
+/* #################################################################################################### */
+/* ------------------------------ struktur => instruktur ------------------------------ */
+.main.instruktur .container{
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  box-shadow: 0 4px 16px #999;
+  padding: 2rem 1rem;
+}
+.main.instruktur .container .box:nth-child(1) > div img{
+  border-radius: 50%;
+  width: 225px;
+  height: 225px;
+  margin: auto;
+}
+.main.instruktur .container .box h3{
+  margin-bottom: 1rem;
+  padding: 8px 1rem;
+  width: 100%;
+  background: #777;
+  color: white;
+}
+.main.instruktur .container .box .line{
+  border-bottom: 1px solid #777;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+}
+.main.instruktur .container .box .line:last-child{
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/*mulai teko kene*/
+.main.instruktur .container .box:nth-child(4) .progres{
+  width: 100%;
+  background: #777;
+  padding: 8px;
+  margin-bottom: 1rem;
+}
+.main.instruktur .container .box:nth-child(4) .progres .persen{
+  display: block;
+  width: 0;
+  background: #fff;
+  color: #777;
+  font-weight: bold;
+  text-align: right;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.main.instruktur .container .box:nth-child(4) .progres .persen.office.maju{
+  width: 95%;
+}
+.main.instruktur .container .box:nth-child(4) .progres .persen.graphic.maju{
+  width: 90%;
+}
+.main.instruktur .container .box:nth-child(4) .progres .persen.video.maju{
+  width: 85%;
+}
+.main.instruktur .container .box:nth-child(4) .progres .persen.web.maju{
+  width: 92.5%;
+}
+
+/*iki bener*/
+.main.instruktur .container .box:nth-child(5) a{
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #777;
+  margin-bottom: 16px;
+}
+.main.instruktur .container .box:nth-child(5) a:hover{
+  color: #333;
+}
+.main.instruktur .container .box:nth-child(5) a:last-child{
+  margin-bottom: 0;
+}
+.main.instruktur .container .box:nth-child(5) a i{
+  margin-right: 8px;
+  background: #777;
+  color: #fff;
+  padding: 4px;
+  width: 24px;
+  height: 24px;
+}
+.main.instruktur .container .box:nth-child(5) a:hover i{
+  background: #333;
+}
+.main.instruktur .container .box .flex-evenly a{
+  color: #fff;
+  background: #777;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+.main.instruktur .container .box .flex-evenly a:hover{
+  background: #333;
+}
+@media(max-width: 800px){
+  .main.instruktur .container{
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
