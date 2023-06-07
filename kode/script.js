@@ -1,17 +1,17 @@
 // --------------- for All ---------------
-const forbiddenKeys = ['c', 'u', 's', 'p'];
-const forbiddenKeyCodes = [123, 73, 74];
+// const forbiddenKeys = ['c', 'u', 's', 'p'];
+// const forbiddenKeyCodes = [123, 73, 74];
 
-document.addEventListener("contextmenu", e => {
-	e.preventDefault();
-}, false);
+// document.addEventListener("contextmenu", e => {
+// 	e.preventDefault();
+// }, false);
 
-document.addEventListener("keydown", e => {
-	if (e.ctrlkey || forbiddenKeys.includes(e.key) || forbiddenKeyCodes.includes(e.keyCode)) {
-		e.stopPropagation();
-		e.preventDefault();
-	};
-});
+// document.addEventListener("keydown", e => {
+// 	if (e.ctrlkey || forbiddenKeys.includes(e.key) || forbiddenKeyCodes.includes(e.keyCode)) {
+// 		e.stopPropagation();
+// 		e.preventDefault();
+// 	};
+// });
 
 
 // --------------- header ---------------
