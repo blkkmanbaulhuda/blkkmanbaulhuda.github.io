@@ -1,5 +1,4 @@
 // --------------- for All ---------------
-/*
 const forbiddenKeys = ['c', 'u', 's', 'p'];
 const forbiddenKeyCodes = [123, 73, 74];
 
@@ -13,7 +12,7 @@ document.addEventListener("keydown", e => {
 		e.preventDefault();
 	};
 });
-*/
+
 
 // --------------- header ---------------
 const navbarMenu = document.querySelector('.navbar');
