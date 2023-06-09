@@ -123,6 +123,21 @@ button{
 .mb-3{
   margin-bottom: 3rem;
 }
+.pad-1{
+  padding: 1rem;
+}
+.pad-2{
+  padding: 2rem;
+}
+.pad-3{
+  padding: 3rem;
+}
+.ta-center{
+  text-align: center;
+}
+.silver-shadow{
+  box-shadow: 0 4px 12px silver;
+}
 
 /*root responsive*/
 section,
@@ -145,7 +160,7 @@ footer{
   }
 }
 
-/* ------------------------- header ------------------------- */
+/* --------------- header --------------- */
 .header{
   position: fixed;
   top: 0;
@@ -375,7 +390,7 @@ footer{
   }
 }
 
-/* ------------------------- bg-hero ------------------------- */
+/* --------------- bg-hero --------------- */
 .bg-hero{
   width: 100%;
   height: calc(100vh - 80px);
@@ -438,23 +453,7 @@ footer{
   }
 }
 
-/* ------------------------- tentang ------------------------- */
-.tentang .container{
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 1.5rem;
-  place-items: center;
-}
-
-/* ------------------------- xxx ------------------------- */
-/* ------------------------- xxx ------------------------- */
-/* ------------------------- xxx ------------------------- */
-/* ------------------------- xxx ------------------------- */
-/* ------------------------- xxx ------------------------- */
-
-/* ------------------------- footer ------------------------- */
+/* --------------- section footer --------------- */
 .footer{
   background: var(--biru);
 }
@@ -560,12 +559,26 @@ footer{
   text-align: center;
 }
 
-/* #################################################################################################### */
-/* ------------------------------ index ------------------------------ */
+/* ###################################### index.html ###################################### */
+/* --------------- section tentang --------------- */
+.index.tentang .container{
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
+  place-items: center;
+}
+/* --------------- section keunggulan --------------- */
+.index.keunggulan .container .box i{
+  color: var(--biru);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
-/* #################################################################################################### */
-/* ------------------------------ struktur => instruktur ------------------------------ */
-.main.instruktur .container{
+/* ###################################### instruktur.html ###################################### */
+/* --------------- section main --------------- */
+.instruktur.main .container{
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -574,37 +587,36 @@ footer{
   box-shadow: 0 4px 16px #999;
   padding: 2rem 1rem;
 }
-.main.instruktur .container .box:nth-child(1) > div img{
+.instruktur.main .container .box:nth-child(1) > div img{
   border-radius: 50%;
   width: 225px;
   height: 225px;
   margin: auto;
 }
-.main.instruktur .container .box h3{
+.instruktur.main .container .box h3{
   margin-bottom: 1rem;
   padding: 8px 1rem;
   width: 100%;
   background: #777;
   color: white;
 }
-.main.instruktur .container .box .line{
+.instruktur.main .container .box .line{
   border-bottom: 1px solid #777;
   margin-bottom: 8px;
   padding-bottom: 8px;
 }
-.main.instruktur .container .box .line:last-child{
+.instruktur.main .container .box .line:last-child{
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/*mulai teko kene*/
-.main.instruktur .container .box:nth-child(4) .progres{
+.instruktur.main .container .box:nth-child(4) .progres{
   width: 100%;
   background: #777;
   padding: 8px;
   margin-bottom: 1rem;
 }
-.main.instruktur .container .box:nth-child(4) .progres .persen{
+.instruktur.main .container .box:nth-child(4) .progres .persen{
   display: block;
   width: 0;
   background: #fff;
@@ -614,21 +626,22 @@ footer{
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
-.main.instruktur .container .box:nth-child(4) .progres .persen.office.maju{
+.instruktur.main .container .box:nth-child(4) .progres .persen.office.maju{
   width: 95%;
 }
-.main.instruktur .container .box:nth-child(4) .progres .persen.graphic.maju{
+.instruktur.main .container .box:nth-child(4) .progres .persen.graphic.maju{
   width: 90%;
 }
-.main.instruktur .container .box:nth-child(4) .progres .persen.video.maju{
+.instruktur.main .container .box:nth-child(4) .progres .persen.video.maju{
   width: 85%;
 }
-.main.instruktur .container .box:nth-child(4) .progres .persen.web.maju{
+.instruktur.main .container .box:nth-child(4) .progres .persen.web.maju{
   width: 92.5%;
 }
-
-/*iki bener*/
-.main.instruktur .container .box:nth-child(5) a{
+.instruktur.main .container .box:nth-child(4) .progres .persen.seo.maju{
+  width: 87.5%;
+}
+.instruktur.main .container .box:nth-child(5) a{
   display: block;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -636,13 +649,13 @@ footer{
   color: #777;
   margin-bottom: 16px;
 }
-.main.instruktur .container .box:nth-child(5) a:hover{
+.instruktur.main .container .box:nth-child(5) a:hover{
   color: #333;
 }
-.main.instruktur .container .box:nth-child(5) a:last-child{
+.instruktur.main .container .box:nth-child(5) a:last-child{
   margin-bottom: 0;
 }
-.main.instruktur .container .box:nth-child(5) a i{
+.instruktur.main .container .box:nth-child(5) a i{
   margin-right: 8px;
   background: #777;
   color: #fff;
@@ -650,10 +663,10 @@ footer{
   width: 24px;
   height: 24px;
 }
-.main.instruktur .container .box:nth-child(5) a:hover i{
+.instruktur.main .container .box:nth-child(5) a:hover i{
   background: #333;
 }
-.main.instruktur .container .box .flex-evenly a{
+.instruktur.main .container .box .flex-evenly a{
   color: #fff;
   background: #777;
   width: 32px;
@@ -661,11 +674,11 @@ footer{
   line-height: 32px;
   text-align: center;
 }
-.main.instruktur .container .box .flex-evenly a:hover{
+.instruktur.main .container .box .flex-evenly a:hover{
   background: #333;
 }
 @media(max-width: 800px){
-  .main.instruktur .container{
+  .instruktur.main .container{
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
