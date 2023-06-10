@@ -2,7 +2,8 @@
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration: none;
@@ -136,7 +137,8 @@ button{
   text-align: center;
 }
 .silver-shadow{
-  box-shadow: 0 4px 12px silver;
+  -webkit-box-shadow: 0 4px 12px silver;
+          box-shadow: 0 4px 12px silver;
 }
 
 /*root responsive*/
@@ -198,8 +200,10 @@ footer{
   opacity: 0;
   visibility: hidden;
   -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
   -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
   transition: all .3s ease;
 }
 .header .wrapper .burger-line{
@@ -212,8 +216,10 @@ footer{
   border-radius: 4px;
   background: #fff;
   -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
   -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
   transition: all .3s ease;
 }
 .header .wrapper .burger-line:nth-child(1){
@@ -237,6 +243,7 @@ footer{
   visibility: hidden;
   background: rgba(0,0,0,.5);
   -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
   transition: all .3s ease;
 }
 .header .wrapper .navbar .mobile-logo{
@@ -256,7 +263,8 @@ footer{
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateY(0);
-          transform: translateY(0);
+          -ms-transform: translateY(0);
+      transform: translateY(0);
 }
 .header .wrapper .navbar .menu .menu-item a{
   color: #fff;
@@ -328,6 +336,7 @@ footer{
     visibility: hidden;
     background: var(--biru);
     -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
     transition: all .3s ease;
   }
   .header .wrapper .navbar.active{
@@ -367,7 +376,8 @@ footer{
     visibility: visible;
     background: transparent;
     -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+            -ms-transform: translateY(0px);
+        transform: translateY(0px);
   }
   .header .wrapper .navbar .menu .menu-item .sub-menu .menu-item a{
     color: #fff;
@@ -411,7 +421,8 @@ footer{
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+          -ms-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
   text-align: center;
   color: #fff;
   text-shadow: 0 2px 2px #000;
@@ -558,6 +569,12 @@ footer{
   color: gainsboro;
   text-align: center;
 }
+.footer .copyright p a{
+  color: #111;
+}
+.footer .copyright p a:hover{
+  color: cyan;
+}
 
 /* ###################################### index.html ###################################### */
 /* --------------- section tentang --------------- */
@@ -584,7 +601,8 @@ footer{
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   grid-gap: 1.5rem;
-  box-shadow: 0 4px 16px #999;
+  -webkit-box-shadow: 0 4px 16px #999;
+          box-shadow: 0 4px 16px #999;
   padding: 2rem 1rem;
 }
 .instruktur.main .container .box:nth-child(1) > div img{
@@ -624,6 +642,7 @@ footer{
   font-weight: bold;
   text-align: right;
   -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 .instruktur.main .container .box:nth-child(4) .progres .persen.office.maju{
