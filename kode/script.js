@@ -13,7 +13,6 @@
 // 	};
 // });
 
-
 // --------------- header ---------------
 const navbarMenu = document.querySelector('.navbar');
 const burgerMenu = document.querySelector('.burger');
@@ -93,3 +92,9 @@ var swiper = new Swiper(".mySwiper", {
 // --------------- footer copyright ---------------
 let date = new Date().getFullYear();
 document.querySelector('.tahun').innerHTML = date;
+
+const copyright = document.querySelector('.copyright');
+const anakBaru = document.createElement('p');
+anakBaru.textContent = 'sholeh ridlo';
+anakBaru.innerHTML = 'Designed by : <a href="https://api.whatsapp.com/send/?phone=6285172355653&text=Assalamualaikum%20Pak%20Sholeh.%20" target="_blank">Sholeh Ridlo S.Pd.I</a>';
+copyright.appendChild(anakBaru);
